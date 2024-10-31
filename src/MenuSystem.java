@@ -97,7 +97,7 @@ public class MenuSystem {
                 String Reset = "\u001B[0m";
                 String ITEMQUANTITYFORMAT = String.format("%d", ITEMQUANTITY);
                 
-                if (ITEMQUANTITY <= 5) {
+                if (ITEMQUANTITY <= 5 || ITEMQUANTITY <= 9 ) {
                     ITEMQUANTITYFORMAT = Red + ITEMQUANTITY + Reset;
                 } else if (ITEMQUANTITY >= 10 && ITEMQUANTITY <= 15) {
                     ITEMQUANTITYFORMAT = Yellow + ITEMQUANTITY + Reset;
@@ -215,7 +215,7 @@ public class MenuSystem {
                     String Reset = "\u001B[0m";
                     String ITEMQUANTITYFORMAT = String.format("%d", ITEMQUANTITY);
                     
-                    if (ITEMQUANTITY <= 5) {
+                    if (ITEMQUANTITY <= 5 || ITEMQUANTITY <= 9 ) {
                         ITEMQUANTITYFORMAT = Red + ITEMQUANTITY + Reset;
                     } else if (ITEMQUANTITY >= 10 && ITEMQUANTITY <= 15) {
                         ITEMQUANTITYFORMAT = Yellow + ITEMQUANTITY + Reset;
