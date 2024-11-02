@@ -33,8 +33,8 @@ public class MenuSystem {
     }
 
     public void Menu() {
-        int[] optionInt = {1, 2, 3, 4, 5};
-        String[] optionNames = {"ADD STOCK", "VIEW INVENTORY", "FILTER", "BUY ITEM", "EXIT"};
+        int[] optionInt = {1, 2, 3, 4};
+        String[] optionNames = {"ADD STOCK", "VIEW INVENTORY", "BUY ITEM", "EXIT"};
 
         for (int i = 0; i < optionInt.length; i++) {
             System.out.println(i + 1 + ". " + optionNames[i]);
@@ -62,18 +62,18 @@ public class MenuSystem {
                 Menu();
                 break;
             case 3:
-                break;
-            case 4:
-                try {
+                try
+                {
                     Buy();
-                } catch (SQLException e) {
+                    Menu();
+                }
+                catch (SQLException e)
+                {
                     e.printStackTrace();
                 }
-                Menu();
                 break;
-            case 5:
+            case 4:
                 System.out.println("PROGRAM TERMINATED");
-                closeConnection();
                 break;
         }
     }
